@@ -24,7 +24,7 @@ parkinsons_model = pickle.load(open('saved_models/parkinsons_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
-    selected = option_menu('Diagnostic System',
+    selected = option_menu('Multi-Diseases Diagnostic System',
 
                            ['Diabetes Prediction',
                             'Heart Disease Prediction',
@@ -150,9 +150,9 @@ if selected == 'Heart Disease Prediction':
         heart_prediction = heart_disease_model.predict([user_input])
 
         if heart_prediction[0] == 1:
-            heart_diagnosis = 'The person is having heart disease'
+            heart_diagnosis = 'Sorry, You have heart disease !'
         else:
-            heart_diagnosis = 'The person does not have any heart disease'
+            heart_diagnosis = 'You are Healthy'
 
     st.success(heart_diagnosis)
 
@@ -245,8 +245,8 @@ if selected == "Parkinsons Prediction":
         parkinsons_prediction = parkinsons_model.predict([user_input])
 
         if parkinsons_prediction[0] == 1:
-            parkinsons_diagnosis = "The person has Parkinson's disease"
+            parkinsons_diagnosis = "Sorry, You have Parkinson's disease !"
         else:
-            parkinsons_diagnosis = "The person does not have Parkinson's disease"
+            parkinsons_diagnosis = "You are healthy !"
 
     st.success(parkinsons_diagnosis)
