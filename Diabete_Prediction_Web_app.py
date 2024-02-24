@@ -24,7 +24,7 @@ parkinsons_model = pickle.load(open('saved_models/parkinsons_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
-    selected = option_menu('INTEL. DIAGNOSTIC SYSTEM',
+    selected = option_menu('Diagnostic System',
 
                            ['Diabetes Prediction',
                             'Heart Disease Prediction',
@@ -50,13 +50,13 @@ if selected == 'Diabetes Prediction':
         Glucose = st.text_input('Glucose Level')
 
     with col3:
-        BloodPressure = st.text_input('Blood Pressure value')
+        BloodPressure = st.text_input('Blood Pressure ')
 
     with col1:
-        SkinThickness = st.text_input('Skin Thickness value')
+        SkinThickness = st.text_input('Skin Thickness ')
 
     with col2:
-        Insulin = st.text_input('Insulin Level')
+        Insulin = st.text_input('Insulin ')
 
     with col3:
         BMI = st.text_input('BMI value')
@@ -65,7 +65,7 @@ if selected == 'Diabetes Prediction':
         DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
 
     with col2:
-        Age = st.text_input('Age of the Person')
+        Age = st.text_input('Age')
 
 
     # code for Prediction
